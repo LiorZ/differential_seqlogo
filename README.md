@@ -124,7 +124,7 @@ python diff_logo.py --alphabet PROTEIN example/seq1.fasta example/seq2.fasta --p
 
 produces the following output:
 
-![Example Plot](example/figure.png)
+<img src="example/figure.png" width="300" />
 
 *Figure 1: Sequence logos for each class and the difference logo showing significant differences.*
 
