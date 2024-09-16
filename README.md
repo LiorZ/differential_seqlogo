@@ -4,7 +4,7 @@
 
 ## Overview
 
-This repository provides a Python implementation of the **DiffLogo** tool for comparative visualization of sequence motifs, originally developed by Nettling et al. The script allows users to generate sequence logos and difference logos from two sets of sequences, compute statistical significance of motif differences, and incorporate substitution matrices (e.g., BLOSUM) as priors for amino acid substitution likelihoods.
+This repository provides a Python implementation of the **DiffLogo** tool for comparative visualization of sequence motifs, originally developed by Nettling et al. in R [Original Repo](https://github.com/mgledi/DiffLogo/tree/master). The script allows users to generate sequence logos and difference logos from two sets of sequences, compute statistical significance of motif differences, and incorporate substitution matrices (e.g., BLOSUM) as priors for amino acid substitution likelihoods.
 
 ## Background
 
