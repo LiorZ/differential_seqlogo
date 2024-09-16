@@ -108,6 +108,48 @@ The script generates:
 - **Alphabet Characters**: Ensure that sequences contain only valid characters from the specified alphabet. Unknown or ambiguous characters are ignored by default.
 - **Performance**: The permutation test can be computationally intensive for large datasets or a high number of permutations. Adjust `--n_permutations` based on available computational resources.
 
+## Example Output
+
+After running the script with example FASTA files, the following outputs are generated:
+
+### Sequence Logos and Difference Logo
+
+The script produces sequence logos for each class of sequences and a difference logo highlighting the significant differences between the motifs.
+
+Running the script with the following command:
+
+```bash
+python diff_logo.py --alphabet PROTEIN example/seq1.fasta example/seq2.fasta --pval-csv example/pvals.csv --fig-out example/figure.png
+```
+
+produces the following output:
+
+![Example Plot](example/figure.png)
+
+*Figure 1: Sequence logos for each class and the difference logo showing significant differences.*
+
+### P-Value Results
+
+The script also outputs a CSV file containing the p-values for each position, indicating the statistical significance of the differences observed.
+
+**Example `p_values.csv`:**
+
+| Position | P-Value |
+|----------|---------|
+| 1.0      | -0.0661 |
+| 2.0      | -0.0121 |
+| 3.0      | -4.02   |
+| 4.0      | -0.272  |
+| 5.0      | -0.272  |
+| 6.0      | -0.12   |
+
+
+*Table 1: P-values for each position after multiple testing correction (Benjamini-Hochberg method).*
+
+The CSV file can be found in the `example/` directory
+
+---
+
 ## Script Details
 
 ### Functions
