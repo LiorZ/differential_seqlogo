@@ -45,13 +45,14 @@ While the original DiffLogo tool was implemented in R and primarily focused on D
   - `scipy`
   - `statsmodels`
   - `biopython`
+  - `tqdm` (optional for progress bars)
 
 ### Install Packages
 
 Install the required packages using `pip`:
 
 ```bash
-pip install numpy matplotlib scipy statsmodels biopython
+pip install numpy matplotlib scipy statsmodels biopython tqdm
 ```
 
 ## Usage
@@ -144,7 +145,7 @@ The script also outputs a CSV file containing the p-values for each position, in
 | 6.0      | -0.12   |
 
 
-*Table 1: P-values for each position after multiple testing correction (Benjamini-Hochberg method).*
+*Table 1: Log P-values for each position after multiple testing correction (Benjamini-Hochberg method).*
 
 The CSV file can be found in the `example/` directory
 
