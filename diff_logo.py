@@ -376,7 +376,7 @@ def main():
         for i,p in enumerate(log_pvals):
             pvals_corrected[i] = np.format_float_scientific(p, precision=2)
             arr.append([i+1, pvals_corrected[i]])
-        np.savetxt(args.pval_csv, arr, delimiter=",", fmt='%s', header="position,p-value", comments='')
+        np.savetxt(args.pval_csv, arr, delimiter=",", fmt='%s', header="position,log-p-value", comments='')
 
         print(f"p-values saved to {args.pval_csv}")
 
