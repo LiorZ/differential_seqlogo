@@ -11,6 +11,7 @@ from matplotlib.transforms import Affine2D
 from scipy.stats import gamma
 from statsmodels.stats.multitest import multipletests
 from Bio.SubsMat import MatrixInfo
+import tqdm
 
 # Define Alphabets
 
@@ -178,7 +179,7 @@ def permutation_test(sequences1, sequences2, alphabet, n_permutations=1000, sub_
     observed_divergences = compute_position_divergences(pwm1, pwm2, alphabet, sub_probs=sub_probs)
 
     divergence_null = np.zeros((n_permutations, n_positions))
-    for i in range(n_permutations):
+    for i in tqdm.tqdm(range(n_permutations)):
         permuted_indices = np.random.permutation(n_total)
         perm_sequences1 = [combined_sequences[idx] for idx in permuted_indices[:n_samples1]]
         perm_sequences2 = [combined_sequences[idx] for idx in permuted_indices[n_samples1:]]
