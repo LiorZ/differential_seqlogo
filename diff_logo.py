@@ -378,7 +378,7 @@ def main():
             arr.append([i+1, pvals_corrected[i]])
         np.savetxt(args.pval_csv, arr, delimiter=",", fmt='%s', header="position,log-p-value", comments='')
 
-        print(f"p-values saved to {args.pval_csv}")
+        print(f"log(p-values) saved to {args.pval_csv}")
 
 
 if __name__ == "__main__":
